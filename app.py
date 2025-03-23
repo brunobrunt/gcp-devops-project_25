@@ -31,6 +31,7 @@ def hello_bruno():
         </style>
     </head>
     <body>
+        <marquee><img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker Logo"></marquee>
         <div class="scroll-text">Hello Bruno, This is a Simple Flask application running on Jenkins Server.</div>
     </body>
     </html>
