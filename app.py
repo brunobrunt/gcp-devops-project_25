@@ -9,30 +9,46 @@ def hello_bruno():
     <head>
         <style>
             body {
-                background-color: yellow; /* Set background to yellow */
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                overflow: hidden;
+                background-color: yellow;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+                font-family: Arial, sans-serif;
             }
-            .scroll-text {
-                white-space: nowrap;
+            .fixed-text {
+                text-align: center;
                 font-size: 24px;
                 font-weight: bold;
                 color: black;
-                position: absolute;
-                animation: scroll 10s linear infinite;
+                margin-top: 20px;
             }
-            @keyframes scroll {
-                0% { transform: translateX(100%); }
-                100% { transform: translateX(-100%); }
+            .scrolling-image {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                margin-top: 50px;
+            }
+            .scrolling-image img {
+                position: absolute;
+                width: 200px; /* You can adjust the size */
+                animation: scrollImage 10s linear infinite;
+            }
+            @keyframes scrollImage {
+                0% {
+                    left: 100%;
+                }
+                100% {
+                    left: -200px; /* Match the width of the image */
+                }
             }
         </style>
     </head>
     <body>
-        <marquee><img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker Logo"></marquee>
-        <div class="scroll-text">Hello Bruno, This is a Simple Flask application running on Jenkins Server.</div>
+        <div class="fixed-text">Hello Bruno, This is a Simple Flask application running on Jenkins Server.</div>
+
+        <div class="scrolling-image">
+            <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker Logo">
+        </div>
     </body>
     </html>
     '''
